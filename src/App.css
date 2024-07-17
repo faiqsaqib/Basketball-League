@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: auto;
+  background: #000;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+.tagline{
+  width: 100%;
+  height: 20px;
+  background-color: black;
+  position: fixed;
+  z-index: 5;
+  font-size: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.first-img {
+  position: relative;
+  border-radius: 8px;
+  width: 75%;
+  height: 40%;
+
+}
+
+.first-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  border: 13px solid transparent; /* Start with a transparent border */
+  border-radius: 8px; /* Adjust border radius as needed */
+  animation: borderAnimation 5s infinite linear; /* Adjust animation duration as needed */
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: red; /* Start color */
+    border-top-color: transparent; /* Move from top */
+  }
+  25% {
+    border-color: black; /* Move to right */
+    border-right-color: transparent;
+  }
+  50% {
+    border-color: red; /* Move to bottom */
+    border-bottom-color: transparent;
+  }
+  75% {
+    border-color: black; /* Move to left */
+    border-left-color: transparent;
+  }
+  100% {
+    border-color: red; /* Return to top */
+    border-top-color: transparent;
+  }
+}
+
+
+
+
+header {
+  width: 100vw;
+  height: auto;
+}
+
+footer {
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.home-page {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(../public/bg-img.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 99vw;
+  height: 90vh;
+}
+
+.Amazing {
+  font-family: inherit;
+  font-size: xx-large;
+  color: white;
+  text-shadow: 5px 1px 2px black, 0 0 35px white, 0 0 5px darkblue;
+
+}
+
+.tournament {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.tournament > p {
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 40px;
+  font-style: normal;
+  color: white;
+  letter-spacing: 10px;
+  width: 55%;
+  font-family: monospace;
+  border-right: 5px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(15), cursor 0.4s step-end infinite alternate;
+}
+
+/* cursor blinking */
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* typing effect---- */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+} 
+
+
+.amazing{
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 33px;
+  font-style: normal;
+  color: white;
+  letter-spacing: 10px;
+  margin-bottom: 40px;
+  width: 60%;
+  font-family: monospace;
+  text-shadow: 5px 1px 2px black, 0 0 35px white, 0 0 5px darkblue;
+  border-right: 3px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(15), cursor 0.4s step-end infinite alternate;
+}
